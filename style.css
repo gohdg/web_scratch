@@ -139,7 +139,7 @@ nav {
 .burger {
   width: 25px;
   cursor: pointer;
-  /* display: none; */
+  display: none;
 }
 
 .burger span {
@@ -160,4 +160,49 @@ nav {
 
 .burger:hover span {
   margin-bottom: 5px;
+}
+
+@media (min-width: 991px) {
+  /* !important를 주는 이유는 스크립트에 의해서 속성이 변경이 되면 
+      예를 들어 display:none으로 스크립트에서 바꾸면 
+      미디어 쿼리에서 display:block 만으로는 block으로 바뀌지 않는다. */
+
+  .navigation-bar {
+    display: block !important;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .burger {
+    display: block;
+    position: absolute;
+    /* top: 0; */
+    right: 20px;
+  }
+
+  /* container인 navigation-bar를 안보이게 */
+  .navigation-bar {
+    display: none;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 68px;
+    width: 100%;
+
+    background-color: #262626;
+    padding: 20px 0;
+    z-index: 2;
+  }
+
+  /* 얘네들은 보이게 처리해도 container가 안보이니까 , 
+  나중에 container 만 보이게 하면 되니까 사전에 모양을 만들어 둔다 */
+
+  .navigation-bar ul li {
+    display: block;
+    margin: 15px 0;
+  }
+
+  .navigation-bar ul li a {
+    color: deepskyblue;
+  }
 }

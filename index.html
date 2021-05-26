@@ -8,6 +8,7 @@
     <title>Document</title>
   </head>
   <body>
+    <!-- HEADER AREA -->
     <header>
       <div class="container">
         <nav class="nav d-flex">
@@ -31,5 +32,46 @@
         </nav>
       </div>
     </header>
+
+    <!-- MAIN AREA -->
+    <main>
+      <!-- SECTION AREA-1 -->
+      <section class="home" id="home">
+        <div class="container">
+          <div class="home-wrapper d-grid">
+            <div class="col-left">
+              <h3>I am John Wick</h3>
+              <h1>
+                Front-End <br />
+                Developer
+              </h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatem quia voluptate eaque modi illo voluptas ratione,
+                doloribus unde minus! Dolorem?
+              </p>
+              <div class="contact-icon d-flex">
+                <a href="#">Contact Me</a>
+              </div>
+            </div>
+            <div class="col-right">
+              <img src="img/2.png" alt="" class="img-fluid" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- script Area -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      // $(".burger").click(function () {
+      //   $(".navigation-bar").slideToggle("200");
+      // });
+
+      $(".burger").on("click", function (e) {
+        $(".navigation-bar").slideToggle("200");
+      });
+    </script>
   </body>
 </html>
